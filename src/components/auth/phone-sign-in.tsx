@@ -96,7 +96,14 @@ export function PhoneSignIn({ next }: { next: string }) {
             : 'If this number is registered, the code will arrive on WhatsApp shortly.'
         }
       >
-        <CodeInput key={sent.previewCode} name="code" defaultValue={sent.previewCode} required autoFocus />
+        <CodeInput
+          key={sent.previewCode}
+          name="code"
+          pattern="\d{4,6}"
+          defaultValue={sent.previewCode}
+          required
+          autoFocus
+        />
       </Field>
       <FormError message={error} />
       <SubmitButton pending={pending}>Sign in</SubmitButton>
