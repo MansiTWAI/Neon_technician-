@@ -92,7 +92,7 @@ export function PhoneSignIn({ next }: { next: string }) {
         label={`Code sent to ${phone}`}
         hint={
           sent.previewCode
-            ? `WhatsApp is not connected yet, so we filled in your code: ${sent.previewCode}`
+            ? `WhatsApp is not connected yet, so use the code ${sent.previewCode}. We have filled it in for you.`
             : 'If this number is registered, the code will arrive on WhatsApp shortly.'
         }
       >
